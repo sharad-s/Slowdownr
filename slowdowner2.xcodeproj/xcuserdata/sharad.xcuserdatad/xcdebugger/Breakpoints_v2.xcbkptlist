@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "slowdowner2/MusicViewController.swift"
+            timestampString = "591563202.095252"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "MusicViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "slowdowner2.MusicViewController.slider.getter : Swift.Optional&lt;__C.UISlider&gt;"
+                  moduleName = "slowdowner2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sharad/Documents/iOS/slowdowner/slowdowner2/slowdowner2/MusicViewController.swift"
+                  timestampString = "591562226.12436"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "slowdowner2.MusicViewController.slider.setter : Swift.Optional&lt;__C.UISlider&gt;"
+                  moduleName = "slowdowner2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sharad/Documents/iOS/slowdowner/slowdowner2/slowdowner2/MusicViewController.swift"
+                  timestampString = "591562226.134678"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "slowdowner2.MusicViewController.slider.modify : Swift.Optional&lt;__C.UISlider&gt;"
+                  moduleName = "slowdowner2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sharad/Documents/iOS/slowdowner/slowdowner2/slowdowner2/MusicViewController.swift"
+                  timestampString = "591562226.138219"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "69">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "slowdowner2.MusicViewController.slider.modify : Swift.Optional&lt;__C.UISlider&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "slowdowner2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sharad/Documents/iOS/slowdowner/slowdowner2/slowdowner2/MusicViewController.swift"
+                  timestampString = "591562226.141405"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "slowdowner2.MusicViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; slowdowner2.MusicViewController"
+                  moduleName = "slowdowner2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sharad/Documents/iOS/slowdowner/slowdowner2/slowdowner2/MusicViewController.swift"
+                  timestampString = "591562226.143774"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "1830">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "slowdowner2.MusicViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;slowdowner2.MusicViewController&gt;"
+                  moduleName = "slowdowner2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sharad/Documents/iOS/slowdowner/slowdowner2/slowdowner2/MusicViewController.swift"
+                  timestampString = "591562226.145834"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "1749">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

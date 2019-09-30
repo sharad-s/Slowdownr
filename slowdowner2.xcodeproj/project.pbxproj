@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		7CDCAEF923401F51001C95A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDCAEF823401F51001C95A0 /* AppDelegate.swift */; };
-		7CDCAEFB23401F51001C95A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDCAEFA23401F51001C95A0 /* ViewController.swift */; };
 		7CDCAEFE23401F51001C95A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CDCAEFC23401F51001C95A0 /* Main.storyboard */; };
 		7CDCAF0023401F52001C95A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CDCAEFF23401F52001C95A0 /* Assets.xcassets */; };
 		7CDCAF0323401F52001C95A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CDCAF0123401F52001C95A0 /* LaunchScreen.storyboard */; };
 		7CDCAF0E23401F52001C95A0 /* slowdowner2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDCAF0D23401F52001C95A0 /* slowdowner2Tests.swift */; };
 		7CDCAF1923401F52001C95A0 /* slowdowner2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDCAF1823401F52001C95A0 /* slowdowner2UITests.swift */; };
+		7CDCAF2723402052001C95A0 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDCAF2623402052001C95A0 /* MusicViewController.swift */; };
+		7CDCAF2923411F2B001C95A0 /* test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7CDCAF2823411F2B001C95A0 /* test.mp3 */; };
+		7CEEB37A23416E1F00936C3A /* test2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7CEEB37923416E1F00936C3A /* test2.mp3 */; };
+		7CEEB37C234188CD00936C3A /* matrix.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7CEEB37B234188CD00936C3A /* matrix.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,6 @@
 /* Begin PBXFileReference section */
 		7CDCAEF523401F51001C95A0 /* slowdowner2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = slowdowner2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CDCAEF823401F51001C95A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7CDCAEFA23401F51001C95A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7CDCAEFD23401F51001C95A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7CDCAEFF23401F52001C95A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7CDCAF0223401F52001C95A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,10 @@
 		7CDCAF1423401F52001C95A0 /* slowdowner2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = slowdowner2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CDCAF1823401F52001C95A0 /* slowdowner2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = slowdowner2UITests.swift; sourceTree = "<group>"; };
 		7CDCAF1A23401F52001C95A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CDCAF2623402052001C95A0 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		7CDCAF2823411F2B001C95A0 /* test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = test.mp3; path = ../test.mp3; sourceTree = "<group>"; };
+		7CEEB37923416E1F00936C3A /* test2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test2.mp3; sourceTree = "<group>"; };
+		7CEEB37B234188CD00936C3A /* matrix.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = matrix.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,8 @@
 		7CDCAEEC23401F51001C95A0 = {
 			isa = PBXGroup;
 			children = (
+				7CEEB37B234188CD00936C3A /* matrix.mp3 */,
+				7CEEB37923416E1F00936C3A /* test2.mp3 */,
 				7CDCAEF723401F51001C95A0 /* slowdowner2 */,
 				7CDCAF0C23401F52001C95A0 /* slowdowner2Tests */,
 				7CDCAF1723401F52001C95A0 /* slowdowner2UITests */,
@@ -97,8 +105,9 @@
 		7CDCAEF723401F51001C95A0 /* slowdowner2 */ = {
 			isa = PBXGroup;
 			children = (
+				7CDCAF2823411F2B001C95A0 /* test.mp3 */,
 				7CDCAEF823401F51001C95A0 /* AppDelegate.swift */,
-				7CDCAEFA23401F51001C95A0 /* ViewController.swift */,
+				7CDCAF2623402052001C95A0 /* MusicViewController.swift */,
 				7CDCAEFC23401F51001C95A0 /* Main.storyboard */,
 				7CDCAEFF23401F52001C95A0 /* Assets.xcassets */,
 				7CDCAF0123401F52001C95A0 /* LaunchScreen.storyboard */,
@@ -229,6 +238,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CEEB37C234188CD00936C3A /* matrix.mp3 in Resources */,
+				7CEEB37A23416E1F00936C3A /* test2.mp3 in Resources */,
+				7CDCAF2923411F2B001C95A0 /* test.mp3 in Resources */,
 				7CDCAF0323401F52001C95A0 /* LaunchScreen.storyboard in Resources */,
 				7CDCAF0023401F52001C95A0 /* Assets.xcassets in Resources */,
 				7CDCAEFE23401F51001C95A0 /* Main.storyboard in Resources */,
@@ -256,7 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CDCAEFB23401F51001C95A0 /* ViewController.swift in Sources */,
+				7CDCAF2723402052001C95A0 /* MusicViewController.swift in Sources */,
 				7CDCAEF923401F51001C95A0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,7 +375,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -418,7 +430,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -433,12 +445,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P2N96QYP5;
 				INFOPLIST_FILE = slowdowner2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = swag.slowdowner2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Slowdowner94.Identifier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -450,12 +464,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P2N96QYP5;
 				INFOPLIST_FILE = slowdowner2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = swag.slowdowner2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Slowdowner94.Identifier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
