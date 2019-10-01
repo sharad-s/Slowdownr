@@ -6,84 +6,95 @@
 //  Copyright © 2019 Sharad. All rights reserved.
 //
 
+
+//https://stackoverflow.com/questions/36167852/apple-music-avaudioengine-in-swift
+//https://stackoverflow.com/questions/49925673/is-there-a-way-to-show-lock-screen-controls-using-avaudioengine-and-avaudioplaye
+
+
 import UIKit
 import AVFoundation
+import MediaPlayer
 
 
 //Other imports
 
 class MusicViewController: UIViewController {
 
-//    var musicPlayer = MPMusicPlayerController.applicationMusicPlayer
+    // var musicPlayer = MPMusicPlayerController.applicationMusicPlayer
     var engine = AVAudioEngine()
     var speedControl = AVAudioUnitVarispeed()
     var pitchControl = AVAudioUnitTimePitch()
     var reverbControl = AVAudioUnitReverb()
     
     
-    var fileStrings = [
-        "CHECC",
-        "PROBLEMS",
-        "ONSIGHT"
-    ]
-    
-    var songNames = [
-        "Checc",
-        "Problems",
-        "On Sight"
-    ]
-    var artistNames = [
-        "MIDDMANN",
-        "NK",
-        "88GLAM"
-    ]
-    
+    // UI Props
     @IBOutlet weak var speedLabel: UILabel!
-    
     @IBOutlet weak var pitchLabel: UILabel!
     
     @IBOutlet weak var sliderLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
     
     @IBOutlet weak var songTitle: UILabel!
-    
     @IBOutlet weak var songArtist: UILabel!
+    
+    // Streamer props
+//    lazy var streamer: TimePitchStreamer = {
+//        let streamer = TimePitchStreamer()
+//        streamer.delegate = self
+//        return streamer
+//    }()
+//
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-//  Slider Handlers
+    // Button Handlers
+    @IBAction func selectSongClicked(_ sender: UIButton) {
+        print("boobs")
+        let mediaPicker = MPMediaPickerController(mediaTypes: .music)
+        mediaPicker.allowsPickingMultipleItems = false
+        mediaPicker.showsCloudItems = false // you won't be able to fetch the URL for media items stored in the cloud
+        mediaPicker.delegate = self
+        mediaPicker.prompt = "Pick a track"
+        present(mediaPicker, animated: true, completion: nil)
+    }
+    
+    //  Slider Handlers
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         speedControl.rate = sender.value
         pitchControl.pitch = calculatePitch(speed: sender.value)
-        updateText();
-        changeColor(lightness: sender.value)
+        updateLabelText();
+        view.backgroundColor = changeColor(lightness: sender.value)
     }
-    
     
     @IBAction func reverbValueChanged(_ sender: UISlider) {
         print(sender.value)
         reverbControl.wetDryMix = Float(sender.value)
     }
-    
-    func updateText() {
-        speedLabel.text = "\(speedControl.rate)"
+ 
+    //  Update Text
+    func updateLabelText() {
+        speedLabel.text = String(format: "%.3fx", speedControl.rate)
         pitchLabel.text = "\(pitchControl.pitch)"
-        sliderLabel.text="\(slider.value)"
+        sliderLabel.text = String(format: "%.3fx", slider.value)
     }
     
- 
+    func updateSongText(title: String, artist: String){
+        songTitle.text = title;
+        songArtist.text = artist;
+    }
     
+    //  Calc functions
     func calculatePitch(speed : Float) -> Float {
         //  .1 units of Speed Change = 50 units of pitch change
         //  pitch = 500(speed) - 500
         return 500 * speed - 500;
     }
     
-    func changeColor(lightness: Float) {
+    func changeColor(lightness: Float) -> UIColor {
         //  Calculate brightness with Offset
-        let newBrightness = lightness - 0.5;
+        let newBrightness = lightness - 0.55;
         
         // Get HSB color values from backgroundColor
         var h: CGFloat = 0
@@ -92,66 +103,22 @@ class MusicViewController: UIViewController {
         var a: CGFloat = 0
         view.backgroundColor?.getHue(&h, saturation: &s, brightness: &b, alpha: &a)
         
-        //  Create and set new color with new brightness
-        let color = UIColor(hue: h, saturation: s, brightness: CGFloat(newBrightness), alpha: a)
-        view.backgroundColor = color
+        //  Create a new color with new brightness
+        return UIColor(hue: h, saturation: s, brightness: CGFloat(newBrightness), alpha: a)
     }
-    
-    @IBAction func stopButtonTapped(_ sender: UIButton) {
-        print("stopButtonTapped: Trying")
-        //            try playURL( audioURL! )
-    }
+
     
     
-    @IBAction func speedUpButtonTapped(_ sender: UIButton) {
-        pitchControl.pitch += 50
-        speedControl.rate += 0.1
-        slider.value = speedControl.rate
-        updateText()
-        changeColor(lightness: speedControl.rate)
-    }
-    
-    @IBAction func slowDownButtonTapped(_ sender: UIButton) {
-        pitchControl.pitch -= 50
-        speedControl.rate -= 0.1
-        slider.value = speedControl.rate
-        updateText();
-        changeColor(lightness: slider.value);
-    }
-    
-    
-    @IBAction func playButtonTapped(_ sender: UIButton) {
-        do {
-            
-            let i = Int(sender.currentTitle!)! - 1;
-            let fileString = fileStrings[i]
-            
-            let url = Bundle.main.url(forResource: fileString, withExtension: "mp3")!
-            
-            print("playButtonTapped: Trying Playing URL:", url)
-            
-            try playURL( url )
-            
-            updateSongText(index: i)
-        } catch {
-            print("playButtonTapped: Failed")
-        }
-    }
-    
-    func updateSongText(index: Int){
-        songTitle.text = songNames[index];
-        songArtist.text = artistNames[index];
-    }
-    
+  
     
     func playURL(_ url: URL) throws {
-
         // 1: load the file
         print(1)
         let file = try AVAudioFile(forReading: url)
         
         // 2: create the audio player
         print(2)
+        try AVAudioSession.sharedInstance().setCategory(.playback)
         let audioPlayer = AVAudioPlayerNode()
         
         // 3: connect the components to our playback engine
@@ -178,5 +145,32 @@ class MusicViewController: UIViewController {
         try engine.start()
         audioPlayer.play()
     }
+}
+
+extension MusicViewController: MPMediaPickerControllerDelegate {
+    func mediaPicker(_ mediaPicker: MPMediaPickerController, didPickMediaItems mediaItemCollection: MPMediaItemCollection) {
+        guard let item = mediaItemCollection.items.first else {
+            print("no item")
+            return
+        }
+        print("picking \(item.title!)")
+        print("item,", item)
+        guard let url = item.assetURL else {
+            return print("no url")
+        }
+        
+        dismiss(animated: true) { [weak self] in
+            do{
+                try self?.playURL(url)
+                self?.updateSongText(title: item.title!, artist: item.artist!)
+            } catch {
+                
+            }
+           
+        }
+    }
     
+    func mediaPickerDidCancel(_ mediaPicker: MPMediaPickerController) {
+        dismiss(animated: true, completion: nil)
+    }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7CABBE6A234303BE006F90A0 /* TimePitchStreamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CABBE69234303BE006F90A0 /* TimePitchStreamer.swift */; };
 		7CDCAEF923401F51001C95A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDCAEF823401F51001C95A0 /* AppDelegate.swift */; };
 		7CDCAEFE23401F51001C95A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CDCAEFC23401F51001C95A0 /* Main.storyboard */; };
 		7CDCAF0023401F52001C95A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CDCAEFF23401F52001C95A0 /* Assets.xcassets */; };
@@ -14,12 +15,6 @@
 		7CDCAF0E23401F52001C95A0 /* slowdowner2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDCAF0D23401F52001C95A0 /* slowdowner2Tests.swift */; };
 		7CDCAF1923401F52001C95A0 /* slowdowner2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDCAF1823401F52001C95A0 /* slowdowner2UITests.swift */; };
 		7CDCAF2723402052001C95A0 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDCAF2623402052001C95A0 /* MusicViewController.swift */; };
-		7CDCAF2923411F2B001C95A0 /* test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7CDCAF2823411F2B001C95A0 /* test.mp3 */; };
-		7CEEB37A23416E1F00936C3A /* test2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7CEEB37923416E1F00936C3A /* test2.mp3 */; };
-		7CEEB37C234188CD00936C3A /* matrix.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7CEEB37B234188CD00936C3A /* matrix.mp3 */; };
-		7CEEB3812342A13F00936C3A /* ONSIGHT.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7CEEB3802342A13F00936C3A /* ONSIGHT.mp3 */; };
-		7CEEB3862342D83900936C3A /* CHECC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7CEEB3842342D76800936C3A /* CHECC.mp3 */; };
-		7CEEB3872342D83900936C3A /* PROBLEMS.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7CEEB3852342D76900936C3A /* PROBLEMS.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7CABBE69234303BE006F90A0 /* TimePitchStreamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePitchStreamer.swift; sourceTree = "<group>"; };
 		7CDCAEF523401F51001C95A0 /* slowdowner2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = slowdowner2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CDCAEF823401F51001C95A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CDCAEFD23401F51001C95A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,12 +49,6 @@
 		7CDCAF1823401F52001C95A0 /* slowdowner2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = slowdowner2UITests.swift; sourceTree = "<group>"; };
 		7CDCAF1A23401F52001C95A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CDCAF2623402052001C95A0 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
-		7CDCAF2823411F2B001C95A0 /* test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = test.mp3; path = ../test.mp3; sourceTree = "<group>"; };
-		7CEEB37923416E1F00936C3A /* test2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test2.mp3; sourceTree = "<group>"; };
-		7CEEB37B234188CD00936C3A /* matrix.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = matrix.mp3; sourceTree = "<group>"; };
-		7CEEB3802342A13F00936C3A /* ONSIGHT.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ONSIGHT.mp3; sourceTree = "<group>"; };
-		7CEEB3842342D76800936C3A /* CHECC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CHECC.mp3; sourceTree = "<group>"; };
-		7CEEB3852342D76900936C3A /* PROBLEMS.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = PROBLEMS.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,11 +79,6 @@
 		7CDCAEEC23401F51001C95A0 = {
 			isa = PBXGroup;
 			children = (
-				7CEEB3842342D76800936C3A /* CHECC.mp3 */,
-				7CEEB3852342D76900936C3A /* PROBLEMS.mp3 */,
-				7CEEB3802342A13F00936C3A /* ONSIGHT.mp3 */,
-				7CEEB37B234188CD00936C3A /* matrix.mp3 */,
-				7CEEB37923416E1F00936C3A /* test2.mp3 */,
 				7CDCAEF723401F51001C95A0 /* slowdowner2 */,
 				7CDCAF0C23401F52001C95A0 /* slowdowner2Tests */,
 				7CDCAF1723401F52001C95A0 /* slowdowner2UITests */,
@@ -114,8 +99,8 @@
 		7CDCAEF723401F51001C95A0 /* slowdowner2 */ = {
 			isa = PBXGroup;
 			children = (
-				7CDCAF2823411F2B001C95A0 /* test.mp3 */,
 				7CDCAEF823401F51001C95A0 /* AppDelegate.swift */,
+				7CABBE69234303BE006F90A0 /* TimePitchStreamer.swift */,
 				7CDCAF2623402052001C95A0 /* MusicViewController.swift */,
 				7CDCAEFC23401F51001C95A0 /* Main.storyboard */,
 				7CDCAEFF23401F52001C95A0 /* Assets.xcassets */,
@@ -211,6 +196,11 @@
 				TargetAttributes = {
 					7CDCAEF423401F51001C95A0 = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					7CDCAF0823401F52001C95A0 = {
 						CreatedOnToolsVersion = 10.3;
@@ -247,12 +237,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CEEB3862342D83900936C3A /* CHECC.mp3 in Resources */,
-				7CEEB3872342D83900936C3A /* PROBLEMS.mp3 in Resources */,
-				7CEEB3812342A13F00936C3A /* ONSIGHT.mp3 in Resources */,
-				7CEEB37C234188CD00936C3A /* matrix.mp3 in Resources */,
-				7CEEB37A23416E1F00936C3A /* test2.mp3 in Resources */,
-				7CDCAF2923411F2B001C95A0 /* test.mp3 in Resources */,
 				7CDCAF0323401F52001C95A0 /* LaunchScreen.storyboard in Resources */,
 				7CDCAF0023401F52001C95A0 /* Assets.xcassets in Resources */,
 				7CDCAEFE23401F51001C95A0 /* Main.storyboard in Resources */,
@@ -280,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CABBE6A234303BE006F90A0 /* TimePitchStreamer.swift in Sources */,
 				7CDCAF2723402052001C95A0 /* MusicViewController.swift in Sources */,
 				7CDCAEF923401F51001C95A0 /* AppDelegate.swift in Sources */,
 			);
@@ -464,7 +449,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Slowdowner94.Identifier;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sharadshekar.Slowdownr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -483,7 +468,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Slowdowner94.Identifier;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sharadshekar.Slowdownr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
