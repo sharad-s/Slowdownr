@@ -9,16 +9,20 @@
 
 //https://stackoverflow.com/questions/36167852/apple-music-avaudioengine-in-swift
 //https://stackoverflow.com/questions/49925673/is-there-a-way-to-show-lock-screen-controls-using-avaudioengine-and-avaudioplaye
-
+//https://forums.developer.apple.com/thread/108512
+// https://medium.com/better-programming/create-audio-unit-extension-from-scratch-77abee79d12
 
 import UIKit
 import AVFoundation
 import MediaPlayer
+import os.log
 
 
 //Other imports
 
 class MusicViewController: UIViewController {
+    
+    static let logger = OSLog(subsystem: "com.sharadshekar.slowdowner", category: "ViewController")
 
     // var musicPlayer = MPMusicPlayerController.applicationMusicPlayer
     var engine = AVAudioEngine()
@@ -36,15 +40,7 @@ class MusicViewController: UIViewController {
     
     @IBOutlet weak var songTitle: UILabel!
     @IBOutlet weak var songArtist: UILabel!
-    
-    // Streamer props
-//    lazy var streamer: TimePitchStreamer = {
-//        let streamer = TimePitchStreamer()
-//        streamer.delegate = self
-//        return streamer
-//    }()
-//
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -153,7 +149,7 @@ extension MusicViewController: MPMediaPickerControllerDelegate {
             print("no item")
             return
         }
-        print("picking \(item.title!)")
+        print("picking \(item.title!) - \(item.artist): \(item.assetURL)")
         print("item,", item)
         guard let url = item.assetURL else {
             return print("no url")
