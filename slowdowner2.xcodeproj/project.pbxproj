@@ -17,6 +17,9 @@
 		7CDCAF2923411F2B001C95A0 /* test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7CDCAF2823411F2B001C95A0 /* test.mp3 */; };
 		7CEEB37A23416E1F00936C3A /* test2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7CEEB37923416E1F00936C3A /* test2.mp3 */; };
 		7CEEB37C234188CD00936C3A /* matrix.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7CEEB37B234188CD00936C3A /* matrix.mp3 */; };
+		7CEEB3812342A13F00936C3A /* ONSIGHT.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7CEEB3802342A13F00936C3A /* ONSIGHT.mp3 */; };
+		7CEEB3862342D83900936C3A /* CHECC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7CEEB3842342D76800936C3A /* CHECC.mp3 */; };
+		7CEEB3872342D83900936C3A /* PROBLEMS.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7CEEB3852342D76900936C3A /* PROBLEMS.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		7CDCAF2823411F2B001C95A0 /* test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = test.mp3; path = ../test.mp3; sourceTree = "<group>"; };
 		7CEEB37923416E1F00936C3A /* test2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test2.mp3; sourceTree = "<group>"; };
 		7CEEB37B234188CD00936C3A /* matrix.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = matrix.mp3; sourceTree = "<group>"; };
+		7CEEB3802342A13F00936C3A /* ONSIGHT.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ONSIGHT.mp3; sourceTree = "<group>"; };
+		7CEEB3842342D76800936C3A /* CHECC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CHECC.mp3; sourceTree = "<group>"; };
+		7CEEB3852342D76900936C3A /* PROBLEMS.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = PROBLEMS.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,9 @@
 		7CDCAEEC23401F51001C95A0 = {
 			isa = PBXGroup;
 			children = (
+				7CEEB3842342D76800936C3A /* CHECC.mp3 */,
+				7CEEB3852342D76900936C3A /* PROBLEMS.mp3 */,
+				7CEEB3802342A13F00936C3A /* ONSIGHT.mp3 */,
 				7CEEB37B234188CD00936C3A /* matrix.mp3 */,
 				7CEEB37923416E1F00936C3A /* test2.mp3 */,
 				7CDCAEF723401F51001C95A0 /* slowdowner2 */,
@@ -238,6 +247,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CEEB3862342D83900936C3A /* CHECC.mp3 in Resources */,
+				7CEEB3872342D83900936C3A /* PROBLEMS.mp3 in Resources */,
+				7CEEB3812342A13F00936C3A /* ONSIGHT.mp3 in Resources */,
 				7CEEB37C234188CD00936C3A /* matrix.mp3 in Resources */,
 				7CEEB37A23416E1F00936C3A /* test2.mp3 in Resources */,
 				7CDCAF2923411F2B001C95A0 /* test.mp3 in Resources */,

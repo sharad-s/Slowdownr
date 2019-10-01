@@ -22,20 +22,20 @@ class MusicViewController: UIViewController {
     
     
     var fileStrings = [
-        "matrix",
-        "test",
-        "test2"
+        "CHECC",
+        "PROBLEMS",
+        "ONSIGHT"
     ]
     
     var songNames = [
-        "Matrix",
-        "Kawasaki",
-        "Panther"
+        "Checc",
+        "Problems",
+        "On Sight"
     ]
     var artistNames = [
-        "A.CHAL",
-        "88GLAM",
-        "Made in Heights"
+        "MIDDMANN",
+        "NK",
+        "88GLAM"
     ]
     
     @IBOutlet weak var speedLabel: UILabel!
@@ -178,4 +178,5 @@ class MusicViewController: UIViewController {
         try engine.start()
         audioPlayer.play()
     }
+    
 }
