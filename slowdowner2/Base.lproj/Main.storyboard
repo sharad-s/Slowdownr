@@ -107,7 +107,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="DNd-TM-rMq">
-                                                <rect key="frame" x="0.0" y="86.5" width="328" height="70.5"/>
+                                                <rect key="frame" x="0.0" y="70.5" width="328" height="70.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reverb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBy-65-7ah">
                                                         <rect key="frame" x="0.0" y="0.0" width="328" height="20.5"/>
@@ -124,7 +124,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eQ-FO-Zby" colorLabel="IBBuiltInLabel-Green">
-                                                <rect key="frame" x="0.0" y="180.5" width="328" height="60"/>
+                                                <rect key="frame" x="0.0" y="148.5" width="328" height="60"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
@@ -139,6 +139,26 @@
                                                     <action selector="selectSongClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iPJ-e1-CcP"/>
                                                 </connections>
                                             </button>
+                                            <stackView opaque="NO" contentMode="right" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="D83-lu-ery">
+                                                <rect key="frame" x="0.0" y="221.5" width="328" height="60"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mX-cu-Vel" colorLabel="IBBuiltInLabel-Green">
+                                                        <rect key="frame" x="0.0" y="0.0" width="328" height="60"/>
+                                                        <gestureRecognizers/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="rFt-2i-4Vd"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="PLAY">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="playButtonToggled:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s4d-pC-eWY"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                             <stackView opaque="NO" contentMode="TopLeft" distribution="fillProportionally" spacing="85" translatesAutoresizingMaskIntoConstraints="NO" id="705-rv-nD4">
                                                 <rect key="frame" x="0.0" y="300" width="328" height="0.0"/>
                                                 <subviews>
@@ -210,6 +230,7 @@
                     <connections>
                         <outlet property="Slider" destination="mWK-bh-5A9" id="NRt-5i-IWa"/>
                         <outlet property="pitchLabel" destination="61G-9S-0FC" id="aOp-kH-rkr"/>
+                        <outlet property="playPauseButton" destination="1mX-cu-Vel" id="VID-FR-dbd"/>
                         <outlet property="sliderLabel" destination="Sqy-9l-Jgh" id="dAP-AR-rs0"/>
                         <outlet property="songArtist" destination="SZm-vA-Hjm" id="nUH-PZ-1xQ"/>
                         <outlet property="songTitle" destination="MTN-Jr-Qia" id="Lza-Nu-Wh0"/>

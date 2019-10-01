@@ -26,9 +26,11 @@ class MusicViewController: UIViewController {
 
     // var musicPlayer = MPMusicPlayerController.applicationMusicPlayer
     var engine = AVAudioEngine()
+    var audioPlayer = AVAudioPlayerNode()
     var speedControl = AVAudioUnitVarispeed()
     var pitchControl = AVAudioUnitTimePitch()
     var reverbControl = AVAudioUnitReverb()
+    
     
     
     // UI Props
@@ -40,9 +42,25 @@ class MusicViewController: UIViewController {
     
     @IBOutlet weak var songTitle: UILabel!
     @IBOutlet weak var songArtist: UILabel!
+    
+//    Play Button
+    @IBOutlet weak var playPauseButton: UIButton!
+    
+    //    New Stuff
+    @IBOutlet weak var currentTimeLabel: UILabel!
+    @IBOutlet weak var durationTimeLabel: UILabel!
 
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var progressSlider: ProgressSlider!
+    
+
+    var isSeeking = false
+    var currentURL = URL(string: "")
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        playPauseButton.isHidden = true;
     }
     
     // Button Handlers
@@ -112,10 +130,9 @@ class MusicViewController: UIViewController {
         print(1)
         let file = try AVAudioFile(forReading: url)
         
-        // 2: create the audio player
+        // 2: create the audio Session
         print(2)
         try AVAudioSession.sharedInstance().setCategory(.playback)
-        let audioPlayer = AVAudioPlayerNode()
         
         // 3: connect the components to our playback engine
         print(3)
@@ -140,9 +157,36 @@ class MusicViewController: UIViewController {
         print(6)
         try engine.start()
         audioPlayer.play()
+        
+        // Set label
+        playPauseButton.setTitle("PAUSE", for: .normal)
     }
+    
+    func pause() {
+        audioPlayer.pause()
+        playPauseButton.setTitle("PLAY", for: .normal)
+    }
+    
+    
+ 
+    @IBAction func playButtonToggled(_ sender: UIButton) {
+        let url = currentURL!
+        if (audioPlayer.isPlaying){
+            pause()
+        } else {
+            do {
+               try playURL(url)
+            } catch {
+                print("Error Playing Track")
+            }
+        }
+        
+    }
+    
 }
 
+
+//Apple Music Media Extension
 extension MusicViewController: MPMediaPickerControllerDelegate {
     func mediaPicker(_ mediaPicker: MPMediaPickerController, didPickMediaItems mediaItemCollection: MPMediaItemCollection) {
         guard let item = mediaItemCollection.items.first else {
@@ -157,8 +201,10 @@ extension MusicViewController: MPMediaPickerControllerDelegate {
         
         dismiss(animated: true) { [weak self] in
             do{
+                self?.currentURL = url
                 try self?.playURL(url)
                 self?.updateSongText(title: item.title!, artist: item.artist!)
+                self?.playPauseButton.isHidden = false;
             } catch {
                 
             }
